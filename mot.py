@@ -189,7 +189,7 @@ def generate_mot_table(dropdowns: List[BeautifulSoup]) -> pd.DataFrame:
 
     final_df['type_ref'] = np.where(final_df.full_reference_code.str.split(' ').apply(len).eq(2), final_df.full_reference_code.str.split(' ').str[-1].str.strip('()'),"")
     final_df['sub_type_ref'] = np.where(final_df.full_reference_code.str.split(' ').apply(len).eq(3), final_df.full_reference_code.str.split(' ').str[-1].str.strip('()'),"")
-    col_order = ['section_name','section_number','subsection_name','subsection_number','component_name','component_number','type_ref','sub_type_ref','Defect','Category'] 
+    col_order = ['section_name','section_number','subsection_name','subsection_number','component_name','component_number','type_ref','sub_type_ref','full_reference_code','Defect','Category'] 
     return final_df[col_order]
 
 
