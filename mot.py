@@ -77,17 +77,11 @@ def generate_mot_table(dropdowns: List[BeautifulSoup]) -> pd.DataFrame:
             h2 = table.find_previous("h2")
             h3 = table.find_previous("h3")
 
-            # Validate h3 format and section number
-            if h3:
-                match = h3_pattern.match(h3.text)
-                if match and int(match.group(2)) == idx + 1:
-                    h3_name = h3.text.strip()
-                else:
-                    h3 = None
-                    h3_name = ""
-            else:
-                h3_name = ""
+            h3 = table.find_previous("h3")  # Start with the nearest h3 element
+            while h3 and not h3_pattern.match(h3.text):
+                h3 = h3.find_previous("h3")  # Continue backtracking if pattern doesn't match
 
+            h3_name = h3.text.strip() if h3 else ""
             h1_name = h1.text.strip() if h1 else ""
             h2_name = h2.text.strip() if h2 else ""
 
@@ -177,6 +171,7 @@ def generate_mot_table(dropdowns: List[BeautifulSoup]) -> pd.DataFrame:
 
     # Concatenate non-empty lists of DataFrames
     final_df = pd.concat([v for v in sub_section_dfs.values() if len(v)>0], ignore_index=True).reset_index(drop=True)
+
     #Tidying up sort of.. to lazy to do this in the loop. Looks cleaner here IMO
     final_df['section_number'] = final_df.section_name.str.split('.').str[0].str.rstrip('.')
     final_df['section_name'] = final_df.section_name.str.split(' ').str[1:].str.join(' ')
@@ -184,7 +179,7 @@ def generate_mot_table(dropdowns: List[BeautifulSoup]) -> pd.DataFrame:
     final_df['subsection_number'] = final_df.subsection_name.str.split(' ').str[0].str.rstrip('.').str[-1]
     final_df['subsection_name'] = final_df.subsection_name.str.split(' ').str[1:].str.join(' ')
     
-    final_df['component_number'] = final_df.component_name.str.split('.').str[0].str.rstrip('.').str[-1]
+    final_df['component_number'] = final_df.component_name.str.split(' ').str[0].str.rstrip('.').str[-1]
     final_df['component_name'] = final_df.component_name.str.split(' ').str[1:].str.join(' ')
 
     final_df['type_ref'] = final_df['Defect'].str.split(' ').str[0].str.strip('()')
