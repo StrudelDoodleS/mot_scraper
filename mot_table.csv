@@ -134,17 +134,17 @@
 132,Brakes,1,Parking brake performance and efficiency,4,Performance,1,a,,1.4.1 (a),"(a) Parking brake inoperative on one side, or in the case of testing on the road, the vehicle deviates excessively from a straight line",Major
 133,Brakes,1,Parking brake performance and efficiency,4,Efficiency,1,a,i,1.4.2 (a) (i),(a) (i) Parking brake efficiency - below minimum requirement,Major
 134,Brakes,1,Parking brake performance and efficiency,4,Efficiency,1,a,ii,1.4.2 (a) (ii),(a) (ii) Parking brake efficiency - less than 50% of the required value,Dangerous
-135,Brakes,1,Additional braking device (retarder) performance,5,,,a,,1.5 (a),(a) Control for electronic retarder does not allow gradual variation in effort,Major
-136,Brakes,1,Additional braking device (retarder) performance,5,,,b,,1.5 (b),(b) System obviously inoperative,Major
-137,Brakes,1,Anti-lock braking system (ABS),6,,,a,,1.6 (a),(a) Warning device not working,Major
-138,Brakes,1,Anti-lock braking system (ABS),6,,,b,,1.6 (b),(b) Warning device shows system malfunction,Major
-139,Brakes,1,Anti-lock braking system (ABS),6,,,c,,1.6 (c),(c) Wheel speed sensors missing or damaged,Major
-140,Brakes,1,Anti-lock braking system (ABS),6,,,d,,1.6 (d),(d) Wiring damaged,Major
-141,Brakes,1,Anti-lock braking system (ABS),6,,,e,,1.6 (e),(e) Other components missing or damaged,Major
-142,Brakes,1,Anti-lock braking system (ABS),6,,,f,,1.6 (f),(f) ABS system obviously removed,Major
-143,Brakes,1,Electronic braking system (EBS),7,,,a,,1.7 (a),(a) Warning device not working,Major
-144,Brakes,1,Electronic braking system (EBS),7,,,b,,1.7 (b),(b) Warning device shows system malfunction,Major
-145,Brakes,1,Brake fluid,8,,,a,,1.8 (a),(a) Brake fluid contaminated,Major
+135,Brakes,1,Additional braking device (retarder) performance,5,Efficiency,1,a,,1.4.2 (a),(a) Control for electronic retarder does not allow gradual variation in effort,Major
+136,Brakes,1,Additional braking device (retarder) performance,5,Efficiency,1,b,,1.4.2 (b),(b) System obviously inoperative,Major
+137,Brakes,1,Anti-lock braking system (ABS),6,Efficiency,1,a,,1.4.2 (a),(a) Warning device not working,Major
+138,Brakes,1,Anti-lock braking system (ABS),6,Efficiency,1,b,,1.4.2 (b),(b) Warning device shows system malfunction,Major
+139,Brakes,1,Anti-lock braking system (ABS),6,Efficiency,1,c,,1.4.2 (c),(c) Wheel speed sensors missing or damaged,Major
+140,Brakes,1,Anti-lock braking system (ABS),6,Efficiency,1,d,,1.4.2 (d),(d) Wiring damaged,Major
+141,Brakes,1,Anti-lock braking system (ABS),6,Efficiency,1,e,,1.4.2 (e),(e) Other components missing or damaged,Major
+142,Brakes,1,Anti-lock braking system (ABS),6,Efficiency,1,f,,1.4.2 (f),(f) ABS system obviously removed,Major
+143,Brakes,1,Electronic braking system (EBS),7,Efficiency,1,a,,1.4.2 (a),(a) Warning device not working,Major
+144,Brakes,1,Electronic braking system (EBS),7,Efficiency,1,b,,1.4.2 (b),(b) Warning device shows system malfunction,Major
+145,Brakes,1,Brake fluid,8,Efficiency,1,a,,1.4.2 (a),(a) Brake fluid contaminated,Major
 146,Steering,2,Mechanical condition,1,Steering gear condition,2,a,,2.1.1 (a),(a) Excessive roughness in operation of steering,Major
 147,Steering,2,Mechanical condition,1,Steering gear condition,2,b,i,2.1.1 (b) (i),(b) (i) Sector shaft - twisted or splines excessively worn,Major
 148,Steering,2,Mechanical condition,1,Steering gear condition,2,b,ii,2.1.1 (b) (ii),(b) (ii) Sector shaft - twisted or splines worn to the extent that functionality is affected,Dangerous
@@ -214,12 +214,12 @@
 212,Steering,2,"Steering wheel and column or handlebar, forks and yokes",2,Steering column or forks and yokes,2,f,i,2.2.2 (f) (i),"(f) (i) Forks or fork yoke - deformed, fractured or insecure",Major
 213,Steering,2,"Steering wheel and column or handlebar, forks and yokes",2,Steering column or forks and yokes,2,f,ii,2.2.2 (f) (ii),(f) (ii) Forks or fork yoke - in such a condition that steering control is adversely affected or detachment likely,Dangerous
 214,Steering,2,"Steering wheel and column or handlebar, forks and yokes",2,Steering column or forks and yokes,2,g,,2.2.2 (g),(g) Steering head bearings have excessive wear or play,Major
-215,Steering,2,Steering play,3,,,a,i,2.3 (a) (i),"(a) (i) Free play in the steering, measured at the rim of the steering wheel is - excessive",Major
-216,Steering,2,Steering play,3,,,a,ii,2.3 (a) (ii),"(a) (ii) Free play in the steering, measured at the rim of the steering wheel is - excessive to the extent that safe steering is affected",Dangerous
-217,Steering,2,Electronic power steering (EPS),6,,,a,,2.6 (a),(a) EPS MIL indicating a system malfunction,Major
-218,Steering,2,Electronic power steering (EPS),6,,,b,i,2.6 (b) (i),"(b) (i) On ‘fly by wire systems’, the angle of the steering wheel and the angle of the road wheels is - inconsistent",Major
-219,Steering,2,Electronic power steering (EPS),6,,,b,ii,2.6 (b) (ii),"(b) (ii) On ‘fly by wire systems’, the angle of the steering wheel and the angle of the road wheels is - inconsistent to the extent that the steering is adversely affected",Dangerous
-220,Steering,2,Electronic power steering (EPS),6,,,c,,2.6 (c),(c) Electronic power assistance not working,Major
+215,Steering,2,Steering play,3,Steering column or forks and yokes,2,a,i,2.2.2 (a) (i),"(a) (i) Free play in the steering, measured at the rim of the steering wheel is - excessive",Major
+216,Steering,2,Steering play,3,Steering column or forks and yokes,2,a,ii,2.2.2 (a) (ii),"(a) (ii) Free play in the steering, measured at the rim of the steering wheel is - excessive to the extent that safe steering is affected",Dangerous
+217,Steering,2,Electronic power steering (EPS),6,Steering column or forks and yokes,2,a,,2.2.2 (a),(a) EPS MIL indicating a system malfunction,Major
+218,Steering,2,Electronic power steering (EPS),6,Steering column or forks and yokes,2,b,i,2.2.2 (b) (i),"(b) (i) On ‘fly by wire systems’, the angle of the steering wheel and the angle of the road wheels is - inconsistent",Major
+219,Steering,2,Electronic power steering (EPS),6,Steering column or forks and yokes,2,b,ii,2.2.2 (b) (ii),"(b) (ii) On ‘fly by wire systems’, the angle of the steering wheel and the angle of the road wheels is - inconsistent to the extent that the steering is adversely affected",Dangerous
+220,Steering,2,Electronic power steering (EPS),6,Steering column or forks and yokes,2,c,,2.2.2 (c),(c) Electronic power assistance not working,Major
 221,Visibility,3,Field of vision,1,,,a,i,3.1 (a) (i),(a) (i) An obstruction - within the driver’s field of view that significantly affects his view in front or to the sides outside the swept area of windscreen,Minor
 222,Visibility,3,Field of vision,1,,,a,ii,3.1 (a) (ii),(a) (ii) An obstruction - significantly affecting the driver’s view of the road through the swept area of the windscreen or an obligatory external mirror not visible,Major
 223,Visibility,3,Field of vision,1,,,b,i,3.1 (b) (i),(b) (i) A bonnet - which cannot be safely secured in the closed position,Major
@@ -327,24 +327,24 @@
 325,"Lamps, reflectors and electrical equipment",4,‘Tell-tales’ mandatory for lighting equipment,9,"Presence, condition and operation",4,a,i,4.9.1 (a) (i),(a) (i) A mandatory tell-tale - for direction indicators or hazard warning missing or inoperative,Minor
 326,"Lamps, reflectors and electrical equipment",4,‘Tell-tales’ mandatory for lighting equipment,9,"Presence, condition and operation",4,a,ii,4.9.1 (a) (ii),(a) (ii) A mandatory tell-tale - for main beam headlamp or rear fog lamp missing or inoperative,Major
 327,"Lamps, reflectors and electrical equipment",4,‘Tell-tales’ mandatory for lighting equipment,9,Compliance with requirements,4,a,,4.9.2 (a),(a) A hazard warning lamp tell-tale is not a flashing light,Minor
-328,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,,,a,i,4.10 (a) (i),(a) (i) A trailer electrical socket - insecure,Minor
-329,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,,,a,ii,4.10 (a) (ii),(a) (ii) A trailer electrical socket - likely to become detached,Major
-330,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,,,b,i,4.10 (b) (i),(b) (i) Trailer electrical socket wiring - insulation damaged or deteriorated,Minor
-331,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,,,b,ii,4.10 (b) (ii),(b) (ii) Trailer electrical socket wiring - insulation damaged or deteriorated and likely to cause a short-circuit,Major
-332,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,,,c,i,4.10 (c) (i),(c) (i) A 13-pin trailer socket - not functioning correctly,Major
-333,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,,,c,ii,4.10 (c) (ii),(c) (ii) A 13-pin trailer socket - not functioning at all,Dangerous
-334,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,a,i,4.11 (a) (i),(a) (i) Electrical wiring - insecure or inadequately secured,Minor
-335,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,a,ii,4.11 (a) (ii),(a) (ii) Electrical wiring - insecure and in contact with sharp edges or connectors likely to become disconnected,Major
-336,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,a,iii,4.11 (a) (iii),"(a) (iii) Electrical wiring - likely to touch hot or rotating parts, drag on the ground or the connectors for braking or steering disconnected",Dangerous
-337,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,b,i,4.11 (b) (i),(b) (i) Electrical wiring - slightly deteriorated,Minor
-338,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,b,ii,4.11 (b) (ii),(b) (ii) Electrical wiring - so damaged or deteriorated it is likely to cause a short-circuit,Major
-339,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,b,iii,4.11 (b) (iii),(b) (iii) Electrical wiring - for braking or steering components extremely deteriorated,Dangerous
-340,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,c,i,4.11 (c) (i),(c) (i) Electrical wiring insulation - damaged or deteriorated,Minor
-341,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,c,ii,4.11 (c) (ii),(c) (ii) Electrical wiring insulation - heavily deteriorated,Major
-342,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,,,c,iii,4.11 (c) (iii),(c) (iii) Electrical wiring insulation - in such a condition there is an imminent risk of fire or formation of sparks,Dangerous
-343,"Lamps, reflectors and electrical equipment",4,Battery(ies),3,,,a,i,4.13 (a) (i),(a) (i) A battery insecure - but not likely to fall from carrier,Minor
-344,"Lamps, reflectors and electrical equipment",4,Battery(ies),3,,,a,ii,4.13 (a) (ii),(a) (ii) A battery insecure - and likely to fall from carrier or cause a short circuit,Major
-345,"Lamps, reflectors and electrical equipment",4,Battery(ies),3,,,b,,4.13 (b),(b) A battery leaking,Major
+328,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,Compliance with requirements,4,a,i,4.9.2 (a) (i),(a) (i) A trailer electrical socket - insecure,Minor
+329,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,Compliance with requirements,4,a,ii,4.9.2 (a) (ii),(a) (ii) A trailer electrical socket - likely to become detached,Major
+330,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,Compliance with requirements,4,b,i,4.9.2 (b) (i),(b) (i) Trailer electrical socket wiring - insulation damaged or deteriorated,Minor
+331,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,Compliance with requirements,4,b,ii,4.9.2 (b) (ii),(b) (ii) Trailer electrical socket wiring - insulation damaged or deteriorated and likely to cause a short-circuit,Major
+332,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,Compliance with requirements,4,c,i,4.9.2 (c) (i),(c) (i) A 13-pin trailer socket - not functioning correctly,Major
+333,"Lamps, reflectors and electrical equipment",4,Trailer electrical socket,0,Compliance with requirements,4,c,ii,4.9.2 (c) (ii),(c) (ii) A 13-pin trailer socket - not functioning at all,Dangerous
+334,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,a,i,4.9.2 (a) (i),(a) (i) Electrical wiring - insecure or inadequately secured,Minor
+335,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,a,ii,4.9.2 (a) (ii),(a) (ii) Electrical wiring - insecure and in contact with sharp edges or connectors likely to become disconnected,Major
+336,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,a,iii,4.9.2 (a) (iii),"(a) (iii) Electrical wiring - likely to touch hot or rotating parts, drag on the ground or the connectors for braking or steering disconnected",Dangerous
+337,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,b,i,4.9.2 (b) (i),(b) (i) Electrical wiring - slightly deteriorated,Minor
+338,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,b,ii,4.9.2 (b) (ii),(b) (ii) Electrical wiring - so damaged or deteriorated it is likely to cause a short-circuit,Major
+339,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,b,iii,4.9.2 (b) (iii),(b) (iii) Electrical wiring - for braking or steering components extremely deteriorated,Dangerous
+340,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,c,i,4.9.2 (c) (i),(c) (i) Electrical wiring insulation - damaged or deteriorated,Minor
+341,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,c,ii,4.9.2 (c) (ii),(c) (ii) Electrical wiring insulation - heavily deteriorated,Major
+342,"Lamps, reflectors and electrical equipment",4,Electrical wiring,1,Compliance with requirements,4,c,iii,4.9.2 (c) (iii),(c) (iii) Electrical wiring insulation - in such a condition there is an imminent risk of fire or formation of sparks,Dangerous
+343,"Lamps, reflectors and electrical equipment",4,Battery(ies),3,Compliance with requirements,4,a,i,4.9.2 (a) (i),(a) (i) A battery insecure - but not likely to fall from carrier,Minor
+344,"Lamps, reflectors and electrical equipment",4,Battery(ies),3,Compliance with requirements,4,a,ii,4.9.2 (a) (ii),(a) (ii) A battery insecure - and likely to fall from carrier or cause a short circuit,Major
+345,"Lamps, reflectors and electrical equipment",4,Battery(ies),3,Compliance with requirements,4,b,,4.9.2 (b),(b) A battery leaking,Major
 346,"Axles, wheels, tyres and suspension",5,Axles,1,Axles,5,a,,5.1.1 (a),(a) An axle fractured or deformed,Dangerous
 347,"Axles, wheels, tyres and suspension",5,Axles,1,Axles,5,b,i,5.1.1 (b) (i),(b) (i) An axle - insecure or with loose fixing bolts,Major
 348,"Axles, wheels, tyres and suspension",5,Axles,1,Axles,5,b,ii,5.1.1 (b) (ii),(b) (ii) An axle - insecure such that stability is impaired or functionality affected,Dangerous
@@ -371,23 +371,23 @@
 369,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Road wheel condition,5,c,i,5.2.2 (c) (i),(c) (i) A wheel - badly distorted or wear between wheel and hub at spigot mounting,Major
 370,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Road wheel condition,5,c,ii,5.2.2 (c) (ii),(c) (ii) A wheel - distorted or worn to the extent the wheel or tyre is likely to become detached,Dangerous
 371,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Road wheel condition,5,d,,5.2.2 (d),(d) A wheel and its fixings not compatible,Major
-372,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,a,i,5.2 (a) (i),(a) (i) A tyre - load capacity or speed rating not in accordance with the minimum requirements,Major
-373,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,a,ii,5.2 (a) (ii),(a) (ii) A tyre - load capacity insufficient for axle presented weight,Dangerous
-374,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,b,,5.2 (b),(b) Tyres on the same axle or on twin wheels are different sizes,Major
-375,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,c,,5.2 (c),(c) Tyres on the same axle of different structure,Major
-376,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,d,i,5.2 (d) (i),(d) (i) A tyre - with a cut in excess of the requirements deep enough to reach the ply or cords,Major
-377,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,d,ii,5.2 (d) (ii),"(d) (ii) A tyre - with a lump, bulge or tear caused by separation or partial failure of its structure, including any lifting of the tread rubber or with cords exposed or damaged",Dangerous
-378,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,e,,5.2 (e),(e) Tyre tread depth not in accordance with the requirements,Dangerous
-379,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,f,,5.2 (f),(f) A tyre fouling a part of the vehicle,Major
-380,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,g,,5.2 (g),(g) A recut tyre fitted to a vehicle not permitted to be fitted with recut tyres,Major
-381,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,h,,5.2 (h),(h) Tyre pressure monitoring system malfunctioning or obviously not working,Major
-382,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,i,,5.2 (i),(i) A tyre not fitted in compliance with the manufacturer’s sidewall instructions,Major
-383,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,j,,5.2 (j),(j) A tyre valve seriously damaged or misaligned likely to cause sudden deflation of the tyre,Dangerous
-384,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,k,,5.2 (k),(k) A tyre incorrectly seated on the wheel rim,Major
-385,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,l,,5.2 (l),(l) Tyre obviously under-inflated,Minor
-386,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,m,,5.2 (m),"(m) A tyre over ten years old is fitted to a front steered axle of a bus, coach, or any axle on a minibus with a single wheel fitment",Dangerous
-387,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,n,i,5.2 (n) (i),(n) (i) A date code illegible - on a tyre fitted to a rear axle of a bus or coach,Minor
-388,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,,,n,ii,5.2 (n) (ii),(n) (ii) A date code illegible - or not visible on a tyre fitted to a front steered axle of a bus or coach or any axle on a minibus with a single wheel fitment,Major
+372,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,a,i,5.2.3 (a) (i),(a) (i) A tyre - load capacity or speed rating not in accordance with the minimum requirements,Major
+373,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,a,ii,5.2.3 (a) (ii),(a) (ii) A tyre - load capacity insufficient for axle presented weight,Dangerous
+374,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,b,,5.2.3 (b),(b) Tyres on the same axle or on twin wheels are different sizes,Major
+375,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,c,,5.2.3 (c),(c) Tyres on the same axle of different structure,Major
+376,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,d,i,5.2.3 (d) (i),(d) (i) A tyre - with a cut in excess of the requirements deep enough to reach the ply or cords,Major
+377,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,d,ii,5.2.3 (d) (ii),"(d) (ii) A tyre - with a lump, bulge or tear caused by separation or partial failure of its structure, including any lifting of the tread rubber or with cords exposed or damaged",Dangerous
+378,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,e,,5.2.3 (e),(e) Tyre tread depth not in accordance with the requirements,Dangerous
+379,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,f,,5.2.3 (f),(f) A tyre fouling a part of the vehicle,Major
+380,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,g,,5.2.3 (g),(g) A recut tyre fitted to a vehicle not permitted to be fitted with recut tyres,Major
+381,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,h,,5.2.3 (h),(h) Tyre pressure monitoring system malfunctioning or obviously not working,Major
+382,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,i,,5.2.3 (i),(i) A tyre not fitted in compliance with the manufacturer’s sidewall instructions,Major
+383,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,j,,5.2.3 (j),(j) A tyre valve seriously damaged or misaligned likely to cause sudden deflation of the tyre,Dangerous
+384,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,k,,5.2.3 (k),(k) A tyre incorrectly seated on the wheel rim,Major
+385,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,l,,5.2.3 (l),(l) Tyre obviously under-inflated,Minor
+386,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,m,,5.2.3 (m),"(m) A tyre over ten years old is fitted to a front steered axle of a bus, coach, or any axle on a minibus with a single wheel fitment",Dangerous
+387,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,n,i,5.2.3 (n) (i),(n) (i) A date code illegible - on a tyre fitted to a rear axle of a bus or coach,Minor
+388,"Axles, wheels, tyres and suspension",5,Wheels and tyres,2,Tyres,5,n,ii,5.2.3 (n) (ii),(n) (ii) A date code illegible - or not visible on a tyre fitted to a front steered axle of a bus or coach or any axle on a minibus with a single wheel fitment,Major
 389,"Axles, wheels, tyres and suspension",5,Suspension,3,Springs,5,a,i,5.3.1 (a) (i),(a) (i) A spring - insecurely attached to chassis or axle,Major
 390,"Axles, wheels, tyres and suspension",5,Suspension,3,Springs,5,a,ii,5.3.1 (a) (ii),(a) (ii) A spring - with fixings loose to the extent that relative movement is visible,Dangerous
 391,"Axles, wheels, tyres and suspension",5,Suspension,3,Springs,5,b,i,5.3.1 (b) (i),(b) (i) A spring - or spring component fractured or seriously weakened,Major
@@ -407,10 +407,10 @@
 405,"Axles, wheels, tyres and suspension",5,Suspension,3,"Suspension arms, rods, struts, sub-frames, anti-roll bars etc.",5,b,ii,5.3.3 (b) (ii),(b) (ii) A suspension component - fractured or likely to fail,Dangerous
 406,"Axles, wheels, tyres and suspension",5,Suspension,3,"Suspension arms, rods, struts, sub-frames, anti-roll bars etc.",5,c,i,5.3.3 (c) (i),(c) (i) A suspension component - with an unsafe modification,Major
 407,"Axles, wheels, tyres and suspension",5,Suspension,3,"Suspension arms, rods, struts, sub-frames, anti-roll bars etc.",5,c,ii,5.3.3 (c) (ii),(c) (ii) A suspension component - modified so that the suspension is inoperative or likely to foul other components,Dangerous
-408,"Axles, wheels, tyres and suspension",5,Suspension,3,,,a,i,5.3 (a) (i),"(a) (i) A suspension pin, bush, joint or bearing - excessively worn",Major
-409,"Axles, wheels, tyres and suspension",5,Suspension,3,,,a,ii,5.3 (a) (ii),"(a) (ii) A suspension pin, bush, joint or bearing - likely to become detached",Dangerous
-410,"Axles, wheels, tyres and suspension",5,Suspension,3,,,b,i,5.3 (b) (i),(b) (i) A suspension joint dust cover - severely deteriorated,Minor
-411,"Axles, wheels, tyres and suspension",5,Suspension,3,,,b,ii,5.3 (b) (ii),(b) (ii) A suspension joint dust cover - missing or no longer prevents the ingress of dirt etc.,Major
+408,"Axles, wheels, tyres and suspension",5,Suspension,3,"Suspension joints, pins and bushes",5,a,i,5.3.4 (a) (i),"(a) (i) A suspension pin, bush, joint or bearing - excessively worn",Major
+409,"Axles, wheels, tyres and suspension",5,Suspension,3,"Suspension joints, pins and bushes",5,a,ii,5.3.4 (a) (ii),"(a) (ii) A suspension pin, bush, joint or bearing - likely to become detached",Dangerous
+410,"Axles, wheels, tyres and suspension",5,Suspension,3,"Suspension joints, pins and bushes",5,b,i,5.3.4 (b) (i),(b) (i) A suspension joint dust cover - severely deteriorated,Minor
+411,"Axles, wheels, tyres and suspension",5,Suspension,3,"Suspension joints, pins and bushes",5,b,ii,5.3.4 (b) (ii),(b) (ii) A suspension joint dust cover - missing or no longer prevents the ingress of dirt etc.,Major
 412,"Axles, wheels, tyres and suspension",5,Suspension,3,"Gas, air and fluid suspension",5,a,,5.3.5 (a),"(a) A gas, air or fluid suspension system inoperative",Dangerous
 413,"Axles, wheels, tyres and suspension",5,Suspension,3,"Gas, air and fluid suspension",5,b,i,5.3.5 (b) (i),"(b) (i) A gas, air or fluid suspension system component damaged, modified or deteriorated in a way that - it would adversely affect the functioning of the system",Major
 414,"Axles, wheels, tyres and suspension",5,Suspension,3,"Gas, air and fluid suspension",5,b,ii,5.3.5 (b) (ii),"(b) (ii) A gas, air or fluid suspension system component damaged, modified or deteriorated in a way that - its function is seriously affected",Dangerous
@@ -521,26 +521,26 @@
 519,Other equipment,7,Seat belts and supplementary restraint systems (SRS),1,Airbags,7,b,,7.1.5 (b),(b) Not in use,
 520,Other equipment,7,Seat belts and supplementary restraint systems (SRS),1,Airbags,7,c,,7.1.5 (c),(c) An airbag obviously inoperative,Major
 521,Other equipment,7,Seat belts and supplementary restraint systems (SRS),1,Supplementary restraint system (SRS),7,a,,7.1.6 (a),(a) An SRS malfunction indicator lamp (MIL) indicates a system malfunction,Major
-522,Other equipment,7,Anti-theft device,3,,,a,,7.3 (a),(a) Steering lock missing or not functioning,Minor
-523,Other equipment,7,Anti-theft device,3,,,b,,7.3 (b),(b) Steering lock inadvertently engaging,Dangerous
-524,Other equipment,7,Audible warning (horn),7,,,a,,7.7 (a),(a) Audible warning not working,Major
-525,Other equipment,7,Audible warning (horn),7,,,b,,7.7 (b),(b) Audible warning control insecure,Minor
-526,Other equipment,7,Audible warning (horn),7,,,c,,7.7 (c),(c) Audible warning not in accordance with requirements,Major
-527,Other equipment,7,Speedometer,8,,,a,,7.8 (a),(a) Speedometer not fitted where one is required,Major
-528,Other equipment,7,Speedometer,8,,,b,i,7.8 (b) (i),(b) (i) Speedometer - operation impaired,Minor
-529,Other equipment,7,Speedometer,8,,,b,ii,7.8 (b) (ii),(b) (ii) Speedometer - not working,Major
-530,Other equipment,7,Speedometer,8,,,c,i,7.8 (c) (i),(c) (i) Speedometer - not sufficiently illuminated,Minor
-531,Other equipment,7,Speedometer,8,,,c,ii,7.8 (c) (ii),(c) (ii) Speedometer - not illuminated,Major
-532,Other equipment,7,Speed limiter (if required),0,,,a,,7.10 (a),(a) Speed limiter not fitted in accordance with the requirements,Major
-533,Other equipment,7,Speed limiter (if required),0,,,b,,7.10 (b),(b) Speed limiter obviously not operational,Major
-534,Other equipment,7,Speed limiter (if required),0,,,c,,7.10 (c),(c) Speed limiter with an incorrect set speed,Major
-535,Other equipment,7,Speed limiter (if required),0,,,d,,7.10 (d),(d) Speed limiter tamperproof device missing or defective,Major
-536,Other equipment,7,Speed limiter (if required),0,,,e,,7.10 (e),(e) Speed limiter plate missing or illegible,Major
-537,Other equipment,7,Electronic stability control (ESC),2,,,a,,7.12 (a),(a) Wheel speed sensors missing or damaged,Major
-538,Other equipment,7,Electronic stability control (ESC),2,,,b,,7.12 (b),(b) ESC wiring damaged,Major
-539,Other equipment,7,Electronic stability control (ESC),2,,,c,,7.12 (c),(c) Other ESC component missing or damaged,Major
-540,Other equipment,7,Electronic stability control (ESC),2,,,d,,7.12 (d),(d) ESC switch damaged or not functioning correctly,Major
-541,Other equipment,7,Electronic stability control (ESC),2,,,e,,7.12 (e),(e) ESC MIL indicates a system malfunction,Major
+522,Other equipment,7,Anti-theft device,3,Supplementary restraint system (SRS),7,a,,7.1.6 (a),(a) Steering lock missing or not functioning,Minor
+523,Other equipment,7,Anti-theft device,3,Supplementary restraint system (SRS),7,b,,7.1.6 (b),(b) Steering lock inadvertently engaging,Dangerous
+524,Other equipment,7,Audible warning (horn),7,Supplementary restraint system (SRS),7,a,,7.1.6 (a),(a) Audible warning not working,Major
+525,Other equipment,7,Audible warning (horn),7,Supplementary restraint system (SRS),7,b,,7.1.6 (b),(b) Audible warning control insecure,Minor
+526,Other equipment,7,Audible warning (horn),7,Supplementary restraint system (SRS),7,c,,7.1.6 (c),(c) Audible warning not in accordance with requirements,Major
+527,Other equipment,7,Speedometer,8,Supplementary restraint system (SRS),7,a,,7.1.6 (a),(a) Speedometer not fitted where one is required,Major
+528,Other equipment,7,Speedometer,8,Supplementary restraint system (SRS),7,b,i,7.1.6 (b) (i),(b) (i) Speedometer - operation impaired,Minor
+529,Other equipment,7,Speedometer,8,Supplementary restraint system (SRS),7,b,ii,7.1.6 (b) (ii),(b) (ii) Speedometer - not working,Major
+530,Other equipment,7,Speedometer,8,Supplementary restraint system (SRS),7,c,i,7.1.6 (c) (i),(c) (i) Speedometer - not sufficiently illuminated,Minor
+531,Other equipment,7,Speedometer,8,Supplementary restraint system (SRS),7,c,ii,7.1.6 (c) (ii),(c) (ii) Speedometer - not illuminated,Major
+532,Other equipment,7,Speed limiter (if required),0,Supplementary restraint system (SRS),7,a,,7.1.6 (a),(a) Speed limiter not fitted in accordance with the requirements,Major
+533,Other equipment,7,Speed limiter (if required),0,Supplementary restraint system (SRS),7,b,,7.1.6 (b),(b) Speed limiter obviously not operational,Major
+534,Other equipment,7,Speed limiter (if required),0,Supplementary restraint system (SRS),7,c,,7.1.6 (c),(c) Speed limiter with an incorrect set speed,Major
+535,Other equipment,7,Speed limiter (if required),0,Supplementary restraint system (SRS),7,d,,7.1.6 (d),(d) Speed limiter tamperproof device missing or defective,Major
+536,Other equipment,7,Speed limiter (if required),0,Supplementary restraint system (SRS),7,e,,7.1.6 (e),(e) Speed limiter plate missing or illegible,Major
+537,Other equipment,7,Electronic stability control (ESC),2,Supplementary restraint system (SRS),7,a,,7.1.6 (a),(a) Wheel speed sensors missing or damaged,Major
+538,Other equipment,7,Electronic stability control (ESC),2,Supplementary restraint system (SRS),7,b,,7.1.6 (b),(b) ESC wiring damaged,Major
+539,Other equipment,7,Electronic stability control (ESC),2,Supplementary restraint system (SRS),7,c,,7.1.6 (c),(c) Other ESC component missing or damaged,Major
+540,Other equipment,7,Electronic stability control (ESC),2,Supplementary restraint system (SRS),7,d,,7.1.6 (d),(d) ESC switch damaged or not functioning correctly,Major
+541,Other equipment,7,Electronic stability control (ESC),2,Supplementary restraint system (SRS),7,e,,7.1.6 (e),(e) ESC MIL indicates a system malfunction,Major
 542,Nuisance,8,Noise,1,Noise suppression system,8,a,,8.1.1 (a),(a) Exhaust noise levels in excess of those permitted,Major
 543,Nuisance,8,Noise,1,Noise suppression system,8,b,i,8.1.1 (b) (i),(b) (i) Any part of the noise suppression system - insecure,Major
 544,Nuisance,8,Noise,1,Noise suppression system,8,b,ii,8.1.1 (b) (ii),(b) (ii) Any part of the noise suppression system - likely to become detached,Dangerous
@@ -574,13 +574,13 @@
 572,Supplementary tests for buses and coaches,9,Doors,1,Emergency exits,9,b,ii,9.1.2 (b) (ii),(b) (ii) An emergency exit sign - missing,Major
 573,Supplementary tests for buses and coaches,9,Doors,1,Emergency exits,9,c,,9.1.2 (c),(c) Missing break glass hammer (where required),Minor
 574,Supplementary tests for buses and coaches,9,Doors,1,Emergency exits,9,d,,9.1.2 (d),(d) No emergency exit provided (where one is required) or access blocked,Major
-575,Supplementary tests for buses and coaches,9,Passenger grab handles,6,,,a,,9.6 (a),(a) Not in use,
-576,Supplementary tests for buses and coaches,9,Passenger grab handles,6,,,b,i,9.6 (b) (i),(b) (i) A passenger grab handle - defective,Minor
-577,Supplementary tests for buses and coaches,9,Passenger grab handles,6,,,b,ii,9.6 (b) (ii),(b) (ii) A passenger grab handle - insecure or unusable,Major
-578,Supplementary tests for buses and coaches,9,Steps and stairs,7,,,a,i,9.7 (a) (i),(a) (i) A step or stair - in a deteriorated condition,Minor
-579,Supplementary tests for buses and coaches,9,Steps and stairs,7,,,a,ii,9.7 (a) (ii),(a) (ii) A step or stair - significantly damaged,Major
-580,Supplementary tests for buses and coaches,9,Steps and stairs,7,,,a,iii,9.7 (a) (iii),(a) (iii) A step or stair - in such a condition as to affect the stability of passengers during use,Dangerous
-581,Supplementary tests for buses and coaches,9,Steps and stairs,7,,,b,,9.7 (b),(b) A retractable step not operating correctly,Major
+575,Supplementary tests for buses and coaches,9,Passenger grab handles,6,Emergency exits,9,a,,9.1.2 (a),(a) Not in use,
+576,Supplementary tests for buses and coaches,9,Passenger grab handles,6,Emergency exits,9,b,i,9.1.2 (b) (i),(b) (i) A passenger grab handle - defective,Minor
+577,Supplementary tests for buses and coaches,9,Passenger grab handles,6,Emergency exits,9,b,ii,9.1.2 (b) (ii),(b) (ii) A passenger grab handle - insecure or unusable,Major
+578,Supplementary tests for buses and coaches,9,Steps and stairs,7,Emergency exits,9,a,i,9.1.2 (a) (i),(a) (i) A step or stair - in a deteriorated condition,Minor
+579,Supplementary tests for buses and coaches,9,Steps and stairs,7,Emergency exits,9,a,ii,9.1.2 (a) (ii),(a) (ii) A step or stair - significantly damaged,Major
+580,Supplementary tests for buses and coaches,9,Steps and stairs,7,Emergency exits,9,a,iii,9.1.2 (a) (iii),(a) (iii) A step or stair - in such a condition as to affect the stability of passengers during use,Dangerous
+581,Supplementary tests for buses and coaches,9,Steps and stairs,7,Emergency exits,9,b,,9.1.2 (b),(b) A retractable step not operating correctly,Major
 582,Seat belt installation checks,10,Seat belt installation guidance notes,2,,,a,,10.2 (a),"(a) Evidence that original webbing has been cut and/or reworked; eg belts knotted, fraying or fluffing removed/ sealed by burning etc (see note A)",Major
 583,Seat belt installation checks,10,Seat belt installation guidance notes,2,,,b,,10.2 (b),(b) Any part of the installation which has a sharp edge which could or is likely to cut or abrade the webbing,Major
 584,Seat belt installation checks,10,Seat belt installation guidance notes,2,,,c,,10.2 (c),(c) A directly attached anchorage not secured by standard seat belt mounting bolts and washers as detailed in note D,Major
