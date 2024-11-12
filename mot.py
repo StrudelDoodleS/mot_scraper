@@ -181,15 +181,16 @@ def generate_mot_table(dropdowns: List[BeautifulSoup]) -> pd.DataFrame:
     final_df['section_number'] = final_df.section_name.str.split('.').str[0].str.rstrip('.')
     final_df['section_name'] = final_df.section_name.str.split(' ').str[1:].str.join(' ')
     
-    final_df['subsection_number'] = final_df.subsection_name.str.split('.').str[0].str.rstrip('.')
+    final_df['subsection_number'] = final_df.subsection_name.str.split(' ').str[0].str.rstrip('.').str[-1]
     final_df['subsection_name'] = final_df.subsection_name.str.split(' ').str[1:].str.join(' ')
     
-    final_df['component_number'] = final_df.component_name.str.split('.').str[0].str.rstrip('.')
+    final_df['component_number'] = final_df.component_name.str.split('.').str[0].str.rstrip('.').str[-1]
     final_df['component_name'] = final_df.component_name.str.split(' ').str[1:].str.join(' ')
 
-    final_df['type_ref'] = np.where(final_df.full_reference_code.str.split(' ').apply(len).eq(2), final_df.full_reference_code.str.split(' ').str[-1].str.strip('()'),"")
+    final_df['type_ref'] = final_df['Defect'].str.split(' ').str[0].str.strip('()')
     final_df['sub_type_ref'] = np.where(final_df.full_reference_code.str.split(' ').apply(len).eq(3), final_df.full_reference_code.str.split(' ').str[-1].str.strip('()'),"")
     col_order = ['section_name','section_number','subsection_name','subsection_number','component_name','component_number','type_ref','sub_type_ref','full_reference_code','Defect','Category'] 
+    
     return final_df[col_order]
 
 
