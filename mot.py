@@ -46,7 +46,7 @@ def get_dropdowns(url: str) -> List[BeautifulSoup]:
     return soup.find_all("div", class_="govuk-accordion__section")
 
 
-def find_heading(tag_list,re_pattern,parent_section_number):
+def find_heading(tag_list, re_pattern, parent_heading):
     """
     Parent section number is bascially the regex pattern minus 1.
     Reason for this is we can end up finding sections where the parent section is not associated with 
@@ -59,15 +59,10 @@ def find_heading(tag_list,re_pattern,parent_section_number):
     headings = []
     numbers = []
     for item in tag_list:
+        if parent_heading not in item.text.split(' ')[0]:
+            continue
         match = re.search(pattern,item.text)
-        
         if match:
-            # print(f'Matches parent num {int(match.group().split('.')[-2]) != parent_section_number}')
-            # print(match.group().split('.')[-2])
-            # print(item.text.strip())
-            # print()
-            if int(match.group().split('.')[-2]) != parent_section_number:
-                continue
             num = int(''.join(match.group().split('.')))
             headings.append(item)
             numbers.append(num)
@@ -166,19 +161,20 @@ def gen_mot_pandas(dropdowns):
             h2_mumber = int(h2_heading.split(' ')[0].rstrip('.').split('.')[-1])
             #Sometimes tables are not below the initial h3 or 4
             all_h3 = table.find_all_previous('h3')
-            all_h4 = table.find_all_previous('h4')
+            
             
             h3 = None
             h4 = None
             
-            h3_heading = find_heading(all_h3, h3_pattern, h2_mumber)
+            h3_heading = find_heading(all_h3, h3_pattern, h2_heading.split(' ')[0])
 
             if h3_heading:
                 h3_sections = h3_heading.split(' ')[0].rstrip('.').split('.')
                 # Check if there are enough parts in h3_sections before accessing them
                 
                 if len(h3_sections) > 1:
-                    h4_heading = find_heading(all_h4, h4_pattern, int(h3_sections[-1]))
+                    all_h4 = table.find_all_previous('h4')
+                    h4_heading = find_heading(all_h4, h4_pattern, h3_heading.split(' ')[0])
                     if int(h3_sections[-2]) == h2_mumber:
                         h3 = '.'.join(h3_sections)
                     else:
