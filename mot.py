@@ -60,7 +60,12 @@ def find_heading(tag_list,re_pattern,parent_section_number):
     numbers = []
     for item in tag_list:
         match = re.search(pattern,item.text)
+        
         if match:
+            # print(f'Matches parent num {int(match.group().split('.')[-2]) != parent_section_number}')
+            # print(match.group().split('.')[-2])
+            # print(item.text.strip())
+            # print()
             if int(match.group().split('.')[-2]) != parent_section_number:
                 continue
             num = int(''.join(match.group().split('.')))
@@ -114,11 +119,7 @@ def split_and_prepend_defects(text):
     
     return sections
 
-
-def gen_mot_pandas(dropdowns):
-    
-
-    def extract_parentheses(text):
+def extract_parentheses(text):
         # Find the first set of parentheses
         first_match = re.search(r'\([^()]*\)', text)
         matches = []
@@ -133,7 +134,10 @@ def gen_mot_pandas(dropdowns):
             matches.extend(roman_matches)
         
         return " ".join(matches)
-        
+
+def gen_mot_pandas(dropdowns):
+
+    
     h3_pattern = r"^(\d+\.[0-9]+\.[0-9]+)"
     h4_pattern = r'^(\d+\.[0-9]+\.[0-9]+\.[0-9])'
     df_list = []
@@ -151,7 +155,7 @@ def gen_mot_pandas(dropdowns):
             to_skip = [th.text in ['Defect','Category'] for th in all_th]
             if sum(to_skip) < len(to_skip):
                 continue
-                
+            
             
             h1 = table.find_previous("h1") or table.find_previous(class_="manual-title")
             h1_heading = h1.text.strip()
@@ -172,8 +176,9 @@ def gen_mot_pandas(dropdowns):
             if h3_heading:
                 h3_sections = h3_heading.split(' ')[0].rstrip('.').split('.')
                 # Check if there are enough parts in h3_sections before accessing them
+                
                 if len(h3_sections) > 1:
-                    h4_heading = find_heading(all_h4, h4_pattern, int(h3_sections[-2]))
+                    h4_heading = find_heading(all_h4, h4_pattern, int(h3_sections[-1]))
                     if int(h3_sections[-2]) == h2_mumber:
                         h3 = '.'.join(h3_sections)
                     else:
@@ -181,13 +186,14 @@ def gen_mot_pandas(dropdowns):
             
                     if h4_heading:
                         h4_sections = h4_heading.split(' ')[0].rstrip('.').split('.')
+                        
                         # Check lengths to avoid IndexError
-                        if len(h4_sections) > 1 and (int(h4_sections[-2]) == int(h3_sections[-1])) and (int(h3_sections[-2]) == h2_mumber):
+                        if (int(h4_sections[-2]) == int(h3_sections[-1])) and (int(h3_sections[-2]) == h2_mumber):
                             h4 = '.'.join(h4_sections)
                         else:
                             h4 = None
 
-            
+
             # pandas requires it to be stringio
             df = pd.read_html(StringIO(str(table)))[0]
             df = df[~df.Defect.str.contains('Not in use')]
