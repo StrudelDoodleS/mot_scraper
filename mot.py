@@ -4,6 +4,7 @@ import pandas as pd
 import re
 from typing import List, Dict
 import numpy as np
+from io import StringIO
 
 
 BASE_URL = "https://www.gov.uk/guidance/mot-inspection-manual-for-private-passenger-and-light-commercial-vehicles"
@@ -188,8 +189,199 @@ def get_dropdowns(url: str) -> List[BeautifulSoup]:
 #     return final_df[col_order]
 
 
+def find_heading(tag_list,re_pattern):
+    pattern = re.compile(re_pattern)
+    
+    headings = []
+    numbers = []
+    for item in tag_list:
+        match = re.search(pattern,item.text)
+        if match:
+            num = int(''.join(match.group().split('.')))
+            headings.append(item)
+            numbers.append(num)
+    try:
+        # max_num = np.max(numbers)
+        index = np.argmax(numbers)
+        
+        # max)num is not useful!
+        # go to headings index. pull out the text object i.e .text.split(' ')[0]
+        return headings[index].text.strip()
+        
+    except ValueError:  
+        return None
+
+
+def split_and_prepend_defects(text):
+    # Find the first set of parentheses and set it as the main defect descriptor
+    first_paren_match = re.match(r'^(.*?)(?=\(\s*[a-z]+\))', text)
+    if first_paren_match:
+        main_defect = first_paren_match.group(0).strip()
+    else:
+        main_defect = text
+
+    # Initialize storage for the sections
+    sections = []
+    start_idx = 0  # Starting index for section text
+
+    # Pattern to find lowercase Roman numerals in parentheses
+    pattern = re.compile(r'(?=\(\s*[ivxlcdm]+\))')  # Only capture sections with lowercase Roman numerals
+
+    # Loop through matches of the pattern in the text
+    for match in pattern.finditer(text):
+        # Capture each section from start_idx up to the start of the match
+        section = text[start_idx:match.start()].strip()
+        if section:
+            sections.append(f"{main_defect} {section}".strip())
+        # Update start_idx to begin after this match for the next section
+        start_idx = match.start()
+    
+    # Capture the final section after the last match
+    final_section = text[start_idx:].strip()
+    if final_section:
+        sections.append(f"{main_defect} {final_section}".strip())
+    
+    # Remove the main defect prefix from the first section if it’s not split by any Roman numerals
+    if len(sections) > 1:
+        main_defect_text = sections.pop(0)  # Remove the first element as the main defect
+        sections = [f"{main_defect_text} {section}" for section in sections]  # Prepend to each remaining section
+    
+    return sections
+
+
+def gen_mot_pandas(dropdowns):
+    
+    def extract_parentheses(text):
+        matches = " ".join(re.findall(r"\([^()]*\)", text))
+        return matches
+
+    def extract_parentheses(text):
+        # Find the first set of parentheses
+        first_match = re.search(r'\([^()]*\)', text)
+        matches = []
+    
+        # Add the first match if found
+        if first_match:
+            matches.append(first_match.group(0))
+            start_idx = first_match.end()  # Update the starting index for the next search
+    
+            # Find subsequent parentheses with Roman numerals
+            roman_matches = re.findall(r'\(\s*[ivxlcdm]+\s*\)', text[start_idx:])
+            matches.extend(roman_matches)
+        
+        return " ".join(matches)
+    h3_pattern = r"^(\d+\.[0-9]+\.[0-9]+)"
+    h4_pattern = r'^(\d+\.[0-9]+\.[0-9]+\.[0-9])'
+    df_list = []
+    
+    for idx, sub_section in enumerate(dropdowns):
+
+        tables = sub_section.find_all("table")
+        
+        
+        for table in tables:
+
+            #This will skip headers that are not what we want
+            #example is in 3.3 there are two tables 1 is bs we dont want.
+            all_th = table.find_all('th')
+            to_skip = [th.text in ['Defect','Category'] for th in all_th]
+            if sum(to_skip) < len(to_skip):
+                continue
+                
+            
+            h1 = table.find_previous("h1") or table.find_previous(class_="manual-title")
+            h1_heading = h1.text.strip()
+            h1_mumber = int(h1_heading.split(' ')[0].rstrip('.'))
+            
+            h2 = table.find_previous("h2")
+            h2_heading = h2.text.strip()
+            h2_mumber = int(h2_heading.split(' ')[0].rstrip('.').split('.')[-1])
+    
+            #Sometimes tables are not below the initial h3 or 4
+            all_h3 = table.find_all_previous('h3')
+            all_h4 = table.find_all_previous('h4')
+            
+            h3 = None
+            h4 = None
+            
+            h3_heading = find_heading(all_h3, h3_pattern)
+            h4_heading = find_heading(all_h4, h4_pattern)
+
+            if h3_heading:
+                h3_sections = h3_heading.split(' ')[0].rstrip('.').split('.')
+                if int(h3_sections[-2]) == h2_mumber:
+                    h3 = '.'.join(h3_heading)
+                else:
+                    h3 = None
+            
+            if h4_heading:
+                h4_sections = h4_heading.split(' ')[0].rstrip('.').split('.')
+                if ( int( h4_sections[-2] ) == int(h3_sections[-1]) ) and ( int(h3_sections[-2]) == h2_mumber ):
+                    h4 = '.'.join(h4_sections)
+                else:
+                    h4 = None
+            
+            # pandas requires it to be stringio
+            df = pd.read_html(StringIO(str(table)))[0]
+            df = df[~df.Defect.str.contains('Not in use')]
+            
+            df['Defect'] = df.Defect.apply(split_and_prepend_defects)
+            
+            allowed_values = {'Major','Minor', 'Dangerous'}
+            df['Category'] = df.Category.str.split(' ').apply(lambda x: [item for item in x if item in allowed_values])
+            
+            df = df.explode(['Defect','Category']).reset_index(drop=True)
+            df['section_name'] = ' '.join(h1_heading.split(' ')[1:])
+            df['section_number'] = h1_mumber
+            df['sub_section_name'] = ' '.join(h2_heading.split(' ')[1:])
+            df['sub_section_number'] = h2_mumber
+            
+            if h3:
+                df['topic_name'] = ' '.join(h3_heading.split(' ')[1:])
+                df['topic_number'] = int(h3_sections[-1])
+            if h4:
+                df['sub_topic_name'] = ' '.join(h4_heading.split(' ')[1:])
+                df['sub_topic_number'] = int(h4_sections[-1])
+    
+            df['point'] = df.Defect.apply(extract_parentheses)
+
+            # Initialize `full_reference_code` based on available headings
+            if h3 and h4:
+                # Both `h3` and `h4` are available
+                df['full_reference_code'] = (
+                    df['section_number'].astype(str) + "." + 
+                    df['sub_section_number'].astype(str) + "." + 
+                    df['topic_number'].astype(str) + "." + 
+                    df['sub_topic_number'].astype(str) + " " + 
+                    df['point']
+                )
+            elif h3:
+                # Only `h3` is available
+                df['full_reference_code'] = (
+                    df['section_number'].astype(str) + "." + 
+                    df['sub_section_number'].astype(str) + "." + 
+                    df['topic_number'].astype(str) + " " + 
+                    df['point']
+                )
+            else:
+                # Only section and sub-section numbers are available
+                df['full_reference_code'] = (
+                    df['section_number'].astype(str) + "." + 
+                    df['sub_section_number'].astype(str) + " " + 
+                    df['point']
+                )
+            df_list.append(df)
+    concat_df = pd.concat(df_list).reset_index(drop=True)
+    return concat_df
 
 def generate_mot_table(dropdowns: List[BeautifulSoup]) -> pd.DataFrame:
+    """
+    DEPRECATED... Actually not but this doesn;t work
+    I learned a valuable lessons that trying to parse every section in a custom manner through direct
+        manipulation of HTML cells that are kinda wacky generates too many edge cases.
+    As a result I am leaving this here as a reminger to myself... Trying a simpler approach with a data processing library like pandas
+        is not a skill issue... There is a reason this library exists dag nabbit
+    """
     sub_section_dfs: Dict[int, List[pd.DataFrame]] = {}
     # Comprehensive regex pattern for flexible section matching across various formats (e.g., "5.3 (a) (ii)", "10.2")
     section_pattern = re.compile(r"^(\d+\.[0-9]+(\.[0-9])?)")
